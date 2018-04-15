@@ -9,8 +9,5 @@
   </li>
 </ul>
 
-<div *ngIf="selectedProduct">
-  <h2>Selected Product:</h2>
-  <p>{{ selectedProduct.name }}</p>
-</div>
+<app-product-detail [product]="selectedProduct"></app-product-detail>
 
