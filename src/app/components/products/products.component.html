@@ -1,0 +1,16 @@
+<ul>
+  <li 
+  class="product"
+  [class.selected]="selectedProduct && selectedProduct.name === product.name"  
+  *ngFor="let product of products">
+    <p><strong>ID:</strong> {{ product.id }}</p>
+    <p (click)="onSelectProduct(product)"><Strong>Name:</Strong> {{ product.name }}</p>
+     <p><strong>Price:</strong> {{ product.price }}</p>
+  </li>
+</ul>
+
+<div *ngIf="selectedProduct">
+  <h2>Selected Product:</h2>
+  <p>{{ selectedProduct.name }}</p>
+</div>
+
